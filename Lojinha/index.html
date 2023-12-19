@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokestor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/Squirtle.webp">
+</head>
+<body>
+    <!-- HEADER -->
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <h1 class="logo-nome"><b>Pokestor</b></h1>
+            </div>
+            <div id="buscar">
+                <input type="text" id="buscar-input" placeholder="Pesquisar produto" oninput="buscarProduto()">
+                <button onclick="buscarSite()">Buscar</button>
+            </div>
+            <div id="carrinho-icon" onclick="toggleCarrinho()">
+                <div class="imagem">
+                    <img src="img/cart.svg" alt="carrinho">
+                </div>
+                <span id="cont-carrinho">0</span>
+            </div>
+            <div id="carrinho-itens" style="display: none;">
+                <ul id="itens-lista"></ul>
+                <span id="preco-total">Total: R$0.00</span>
+                <button class="limpa" onclick="limparCarrinho()">Limpar Carrinho</button>
+            </div>
+        </div>
+    </header>
+    <!-- MAIN -->
+    <main id="main">
+        <div class="container">
+            <div class="nome">
+                <h2 class="nome-secao">Nossos Produtos:</h2>
+            </div>
+            <div class="produtos">
+                <div class="produto-linha">
+                    <div class="produto">
+                        <div class="imagem">
+                            <img src="img/Pikachu.webp" alt="">
+                        </div>
+                        <div class="infos">
+                            <h3>Pikachu</h3>
+                            <p>R$ 56.99</p>
+                            <button onclick="addCarrinho('Pikachu', 56.99)">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                    <div class="produto">
+                        <div class="imagem">
+                            <img src="img/Charmander.webp" alt="">
+                        </div>
+                        <div class="infos">
+                            <h3>Charmander</h3>
+                            <p>R$ 50.00</p>
+                            <button onclick="addCarrinho('Charmander', 50.00)">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                    <div class="produto">
+                        <div class="imagem">
+                            <img src="img/Mimikyu.webp" alt="">
+                        </div>
+                        <div class="infos">
+                            <h3>Mimikyu</h3>
+                            <p>R$ 80.00</p>
+                            <button onclick="addCarrinho('Mimikyu', 80.00)">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="produtos">
+                <div class="produto-linha">
+                    <div class="produto">
+                        <div class="imagem">
+                            <img src="img/Squirtle.webp" alt="">
+                        </div>
+                        <div class="infos">
+                            <h3>Squirtle</h3>
+                            <p>R$ 100.00</p>
+                            <button onclick="addCarrinho('Squirtle', 100.00)">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                    <div class="produto">
+                        <div class="imagem">
+                            <img src="img/Bulbasaur.webp" alt="">
+                        </div>
+                        <div class="infos">
+                            <h3>Bulbasaur</h3>
+                            <p>R$ 45.00</p>
+                            <button onclick="addCarrinho('Bulbasaur', 45.00)">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                    <div class="produto">
+                        <div class="imagem">
+                            <img src="img/Eevee.webp" alt="">
+                        </div>
+                        <div class="infos">
+                            <h3>Eevee</h3>
+                            <p>R$ 60.90</p>
+                            <button onclick="addCarrinho('Eevee', 60.90)">Adicionar ao carrinho</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+
